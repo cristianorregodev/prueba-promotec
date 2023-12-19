@@ -3,7 +3,7 @@ import DataTable from 'react-data-table-component'
 import { filteredUsers, getUsers } from '../services/users'
 import { Layout } from '../containers/Layout'
 import { Link } from 'react-router-dom'
-import { PAGINATION_OPTIONS, TABLE_HEADER } from '../helpers'
+import { PAGINATION_OPTIONS, TABLE_HEADER } from '../containers/helpers'
 export const Users = () => {
     const [search, setSearch] = useState('')
     const [users, setUsers] = useState([])

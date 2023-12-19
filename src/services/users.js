@@ -94,3 +94,20 @@ export const editUser = async (user) => {
         console.log(error)
     }
 }
+
+export const deleteUser = async (id) => {
+    try {
+        const response = await fetch(`${VITE_API_URL}/user/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'app-id': VITE_APP_ID,
+            },
+        })
+        const success = await response.json()
+        const users = success
+        return users
+    } catch (error) {
+        console.log(error)
+    }
+}
